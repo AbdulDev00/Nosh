@@ -1,0 +1,39 @@
+@import "tailwindcss";
+/* Show hamburger below 900px */
+@media (max-width: 899px) {
+  .custom-desktop-nav {
+    display: none !important;
+  }
+
+  .custom-mobile-nav {
+    display: flex !important;
+  }
+
+  .custom-mobile-menu {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+
+/* Hide mobile nav by default */
+.custom-mobile-nav,
+.custom-mobile-menu {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
